@@ -1,0 +1,11 @@
+Nos,Question,A,B,C,ANS
+1,What is the largest planet in our solar system?,Mars,Jupiter,Pluto,Jupiter
+2,Which programming language is used for mobile app development?,Python,Swift,Ruby,Swift
+3,What is the primary function of a CPU?,Storage,Processing,Networking,Processing
+4,Which data structure stores elements in a specific order and allows duplicate values?,Queue,Stack,Array,Array
+5,What does CSS stand for?,Cascading,Scripting,Styling,Cascading
+6,Which protocol allows for secure communication over the internet?,FTP,HTTPS,SMTP,HTTPS
+7,What is the binary equivalent of the decimal number 10?,1001,1010,1100,1010
+8,Which data type is used to store whole numbers in Python?,Integer,Float,Boolean,Integer
+9,What is the process of converting source code to machine code called?,Compilation,Execution,Translation,Compilation
+10,Which cloud computing service provides storage for files and documents?,Azure,Dropbox,Discord,Dropbox

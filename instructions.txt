@@ -1,0 +1,5 @@
+-Open Chrome, then threeDots->Help->About Google Chrome . Check your Chrome version here . 
+	it should be 121.0.6167.161 , if its not ,update it to that version.
+
+- create a new chrome profile
+

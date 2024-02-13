@@ -10,7 +10,29 @@ from tempfile import gettempdir
 polly = boto3.client('polly')
 
 try:
-    response = polly.synthesize_speech(Text="Access the audio stream from the response", OutputFormat="mp3", VoiceId="Joanna")
+    
+    text=f"""
+        <speak> 
+        <prosody rate="80%">
+            What is the capital of France?
+        </prosody>
+        <prosody rate="80%">
+            The capital of France is Paris.
+        </prosody>
+        <prosody rate="80%">
+            What is the largest ocean?
+        </prosody>
+        <prosody rate="80%">
+            The largest ocean is the Pacific Ocean.
+        </prosody>
+        <prosody rate="80%">
+             Who wrote Hamlet?
+        </prosody>
+        <prosody rate="80%">
+            Hamlet was written by William Shakespeare.
+        </prosody>
+    </speak>"""
+    response = polly.synthesize_speech(Engine="standard",Text=text,TextType="ssml", OutputFormat="mp3", VoiceId="Joanna")
 except (BotoCoreError, ClientError) as error:
     print(error)
     sys.exit(-1)
@@ -18,7 +40,7 @@ except (BotoCoreError, ClientError) as error:
 # Access the audio stream from the response
 if "AudioStream" in response:
         with closing(response["AudioStream"]) as stream:
-            output = os.path.join(os.getcwd(), "/speech.mp3")
+            output = os.path.join(os.getcwd(), "Freelancer/021121 Canvas Automation Using GPT/speech.mp3")
             try:
             # Open a file for writing the output as a binary stream
                 with open(output, "wb") as file:
